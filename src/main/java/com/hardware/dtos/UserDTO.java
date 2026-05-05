@@ -1,6 +1,5 @@
-package com.hardware.entities;
+package com.hardware.dtos;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,16 +8,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-@Entity
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserDTO {
     private Long id;
     private String username;
-    @Column(unique = true)
     private String email;
     private String password;
-    @Column(length = 10)
     private String contact;
     private String address;
 }

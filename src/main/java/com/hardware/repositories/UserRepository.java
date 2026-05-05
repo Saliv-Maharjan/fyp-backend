@@ -1,4 +1,7 @@
 package com.hardware.repositories;
 
-public interface UserRepository {
+import com.hardware.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
 }
